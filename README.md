@@ -1,6 +1,9 @@
 # Roster-Scraper
 A Python script (using Selenium) to Scrape and convert online roster Data to Calendar files (.ics)
 
+## Video Demo
+[I understand most people won't ever be able to run this code without a coles login so click to download the video!](https://github.com/James-Nunn/Roster-Scraper/blob/3be6c42a1749ccae16798a1064b8f8ca34c47324/Roster%20Scraper.mp4)
+
 ## Problem
 My family shares a calendar and likes it to be up to date with my shifts at work. The process of checking my shifts and making calendar events every week became tedious and repetitive very quickly. My current wisdom is that tedious and repetitive tasks tend to be perfect for digital solutions so I got to work making this during my down time. 
 
