@@ -5,22 +5,17 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-
 import time
 from ics import Calendar, Event
 import datetime
 from datetime import timedelta
 
-# set your username and password
 username = "username"
 password = "password"
 
-# open Chrome and navigate to the login page
-# driver = webdriver.Chrome('/Users/jnunn1/Downloads/chromedriver_mac64/chromedriver')
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("https://login.colesgroup.com.au/nidp/saml2/sso?sid=0&option=credential")
 
-# find the username and password fields and enter your credentials
 elem = WebDriverWait(driver, 30).until(
 EC.presence_of_element_located((By.ID, "Ecom_User_ID"))
 )
@@ -77,8 +72,9 @@ for day in allDays:
         e.name = "James Work"
         e.begin = zBeginTime
         e.end = zEndTime
+        # Haven't Scraped Department
         e.description = 'I have work in department...'
-        e.location = 'Redbank Plaza, 1 Collingwood Park Drv, Redbank QLD 4301'
+        e.location = 'location of work'
         c.events.add(e)
         c.events
         try:
@@ -90,16 +86,13 @@ for day in allDays:
 
         finally:
             time.sleep(1)
-
 print('Week Completed see the myShifts file')
-
-time.sleep(1000)
 driver.quit()
 
 
+# Old method of getting data 
+
 # index = 0
-
-
 #
 # allDays = driver.find_elements(By.CLASS_NAME, "weeklycalendar-daycolumn")
 #
